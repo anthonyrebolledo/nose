@@ -15,9 +15,9 @@ def jugar_monopoly():
 
         if dado1 == dado2:
             intentos += 1
-            print("perro qlo con suerte!!! juegue.")
+            print("que suerte sacaste doble.")
             if intentos == 3:
-                print("PA CANA MI SHAN!")
+                print("vaya a la carcel mucha suerte tiene que ser nerfeada")
                 break
         else:
             print("Turno finalizado.")
