@@ -1,29 +1,33 @@
-#crear lista para almacenar las ventas de la semana
-ventas=[]
-#usar un ciclo para ingresar las ventas
-for i in range(7): #7 dias de la semana
-    venta=float(input(f"ingrese las ventas del dia{i+1}:"))
-    ventas.append(venta)
-    print(venta)
+import random
 
-#procesar los datos
-total_ventas=sum(ventas)
+def lanzar_dados():
+    # Genera dos números aleatorios entre 1 y 6
+    dado1 = random.randint(1, 6)
+    dado2 = random.randint(1, 6)
+    return dado1, dado2
 
-print(total_ventas)
-total_ventas=sum(ventas)
-promedio_ventas=total_ventas/len(ventas)
+def jugar_monopoly():
+    intentos = 0
 
+    while True:
+        dado1, dado2 = lanzar_dados()
+        print(f"Has sacado: {dado1} y {dado2}")
 
-#condicion para verificar si se alcanzo la meta
-meta=5000
-
-if total_ventas>=meta:
-    mensaje="felicidades! te entregaremos a tu perro"
-else:
-    mensaje= "西姆普雷的阿特拉帕多"
-
-#imprimir el resultado
-print("\n----reporte-----")
-print(f"total de ventas: ${total_ventas}")
-print(f"promedio ${promedio_ventas}")
-print(mensaje)
+        if dado1 == dado2:
+            intentos += 1
+            print("perro qlo con suerte!!! juegue.")
+            if intentos == 3:
+                print("PA CANA MI SHAN!")
+                break
+        else:
+            print("Turno finalizado.")
+            break
+resultado = jugar_monopoly()
+while True:
+    jugar_monopoly()
+    opcion = input("¿Quieres volver a tirar los dados? (s/n): ").strip().lower()
+    if opcion == 'n':  # Si elige 'n', termina el juego
+        print("Juego terminado.")
+        break
+    elif opcion != 's':  # Si no es 's' ni 'n', muestra un mensaje de error
+        print("Opción no válida. Por favor, ingresa 's' para sí o 'n' para no.")
