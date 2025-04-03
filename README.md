@@ -2,6 +2,8 @@ Mini-proyecto
 
 Integrantes:Esmilian Trincado, Gabriel Soto y Anthony Rebolledo
 
+Programas ocupados: Visual Studio code y python
+
 Descripción del Proyecto: Dados para Monopoly Para nuestro mini proyecto de clase, nos propusimos crear dados digitales que puedan usarse en una partida de Monopoly, respetando las reglas del juego. Reglas consideradas:
 
     Si los dados muestran el mismo número, se llama Dobles.
